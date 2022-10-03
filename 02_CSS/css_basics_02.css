@@ -1,0 +1,36 @@
+.firstDiv {
+    color:blue;
+}
+
+.secondDiv {
+    color:hotpink;
+}
+
+#singledout {
+    color:brown;
+    text-decoration: line-through;
+}
+
+/* The asterisc is a selector for every element of the page */
+* {
+    background-color: burlywood;
+}
+
+/* css selector: adjacent siblings */
+/* e.g. if i want to select all unordered list items that are next to an h3 */
+h3 + ul {
+    border: 4px dotted purple;
+}
+
+/* other selectors: descendants */
+/* if you want to grab all anchor tags inside a list */
+li a {
+    color:red;
+}
+
+/* other selector: attributes */
+/* if you want to select an anchor with a specific href */
+li a[href="www.npr.com"] {
+    color:blue;
+    border: 5px solid orange;
+}

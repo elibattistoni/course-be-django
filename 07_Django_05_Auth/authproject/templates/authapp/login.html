@@ -1,0 +1,20 @@
+{% extends "authapp/base.html" %}
+
+{% block body_block %}
+<div class="container customcontainer">
+    <h1>Please login</h1>
+    <h3>Fill out the form:</h3>
+
+    <form action="{% url 'authapp:user_login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="Enter Username">
+
+        <label for="password">Password:</label>
+        <input type="passwod" name="password">
+
+        <input type="submit" name="" value="Login">
+    </form>
+</div>
+
+{% endblock %}

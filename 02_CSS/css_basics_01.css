@@ -1,0 +1,40 @@
+/* This is a comment ctrl+shift+7*/
+/* part 1 */
+
+h1 {
+    color:blueviolet;
+}
+
+li {
+    color:rgb(75, 133, 187);
+}
+
+p {
+    color: #087660;
+}
+
+h4 {
+    color: rgba(211, 223, 43, 0.6)
+}
+
+/* part 2 */
+
+body {
+    /* background: url(https://bluetensor.ai/wp-content/uploads/2021/04/Logo_BTe_OK_Trasp_1359x634.png); */
+    /* background-repeat: no-repeat; */
+    background-color: lightslategray;
+    /* you can also refer to bckground-color with background only */
+}
+
+div {
+    background-color: lightgray;
+    border-color: blueviolet;
+    /* border-width: thin; */
+    border-width: 3px;
+    border-style: dashed;
+}
+
+span {
+    background-color: cornflowerblue;
+    color: darkblue;
+}

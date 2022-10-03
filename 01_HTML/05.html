@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hotel feedback</title>
+</head>
+
+<body>
+    <h1>Hotel Feeback Form</h1>
+    <br><br>
+
+    <form method="get">
+        <h2>NOT LINKED RADIO BUTTONS</h2>
+        <h3>Are you from inside the US or outside the US?</h3>
+        <!-- radio button -->
+        <label for="inusa">Inside the USA:</label>
+        <input id="inusa" type="radio" name="" value="">
+        <label for="outusa">Outside the USA:</label>
+        <input id="outusa" type="radio" name="" value="">
+        <br><br><br>
+
+        <!-- you want to link the two radio buttons, so that if one is selected the other cannot -->
+        <!-- you link them by giving them the same name -->
+        <h2>LINKED RADIO BUTTONS</h2>
+        <h3>Are you from inside the US or outside the US?</h3>
+        <label for="inusa">Inside the USA:</label>
+        <input id="inusa" type="radio" name="loc" value="inside">
+        <label for="outusa">Outside the USA:</label>
+        <input id="outusa" type="radio" name="loc" value="outside">
+        <br><br><br>
+
+        <h2>DROP DOWN MENU</h2>
+        <h3>How was your service?</h3>
+        <select name="stars">
+            <option value="great">5</option>
+            <!-- value is for the backend, and you can display a different value on the frontend -->
+            <option value="almost great">4</option>
+            <option value="good">3</option>
+            <option value="almost good">2</option>
+            <option value="bad">1</option>
+        </select>
+        <br><br><br>
+
+        <h2>TEXT AREA</h2>
+        <h3>Any other feedback?</h3>
+        <textarea name="mytext" rows="8" cols="80"></textarea>
+        <br><br><br>
+
+        <input type="submit" name="" value="SUBMIT">
+
+    </form>
+
+
+</body>
+
+</html>

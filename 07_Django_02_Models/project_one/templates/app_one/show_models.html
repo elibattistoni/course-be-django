@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <!-- latest compiled and minified css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static "app_one/css/show_models.css" %}>
+    <title>View the Models</title>
+</head>
+
+<body>
+    <h1>Hi Welcome to the view of the models</h1>
+    <h2>Here are your access records:</h2>
+    
+    <div class="container-fluid djangomodels">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+            <tbody>
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body {
+    font-family: 'Indie Flower', cursive;
+}
+
+h1 {
+    text-align: center;
+}
+
+.art {
+    margin: auto;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    border: 4px solid white;
+    padding: 10px;
+}
+
+#color1 {
+    background-color: #FBF8CC;
+}
+#color2 {
+    background-color: #FDE4CF;
+}
+#color3 {
+    background-color: #FFCFD2;
+}
+#color4 {
+    background-color: #F1C0E8;
+}
+#color5 {
+    background-color: #CFBAF0;
+}
+#color6 {
+    background-color: #A3C4F3;
+}
+#color7 {
+    background-color: #90DBF4;
+}
+#color8 {
+    background-color: #8EECF5;
+}
+#color9 {
+    background-color: #98F5E1;
+}
+#color10 {
+    background-color: #B9FBC0;
+}

@@ -1,0 +1,26 @@
+h1 {
+    font-family: "Arial";
+    text-align: center;
+}
+
+p {
+    /* font-family: monospace; */
+    font-family: 'Indie Flower', cursive;
+}
+
+body {
+    font-size: 20px;
+}
+
+/* if you want to have relationships, e.g. the second paragraph as twice as large the basic font size */
+
+/* 1em = 16px */
+/* having defined the basic font size of the body as 20pk, any reference to em is going to be 1em = 20px */
+#two {
+    font-size: 2.0em;
+}
+
+/* p {
+    font-style: italic;
+    font-weight: bold;
+} */

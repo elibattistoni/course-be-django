@@ -1,0 +1,47 @@
+html{
+    display: table;
+    margin: auto
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.customcontainer{
+    background-color: rgb(220, 220, 220);
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.tablecontainer{
+    text-align: center;
+    margin: 2rem;
+}
+
+/* remove the black border of the head */
+.table > :not(:first-child) {
+    border-top: 0;
+}
+
+.customtable{
+    margin-bottom: 0rem;
+    border-spacing: 0;
+}
+
+tr, td , th{
+    border: 1px solid rgb(169, 169, 169);
+}
+
+tbody tr:last-child td:last-child{
+    border-radius: 0rem 0rem 1rem 0rem;
+}
+
+tbody tr:last-child td:nth-last-child(3){
+    border-radius: 0rem 0rem 0rem 1rem;
+}
+
