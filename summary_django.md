@@ -1,4 +1,7 @@
 # Summary of Django commands
+pip install django==4.1.1
+
+https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3
 
 1. create the project folder and set up `django-admin startproject name_of_the_project`
 2. `cd name_of_the_project`
