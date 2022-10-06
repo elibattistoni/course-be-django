@@ -68,3 +68,14 @@ class School(models.Model):
     def __str__(self):
         return self.name
 ```
+
+# CRUD
+Create - Retrieve - Update - Delete
+
+Whenerer you work with models and databases you will need to perform those four basic operations.
+
+Luckily, Django has Class Based Views to simplify this entire process for you.
+We will start with the **CreateView** class, and we will purposefully induce a few errors to clarify where certain variable names are coming from.
+Then we will move to the **UpdateView** and **DeleteView** classes.
+
+How to create a new School using the **CreateView**

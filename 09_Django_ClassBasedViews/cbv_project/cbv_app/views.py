@@ -1,7 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import (
+    View,
+    TemplateView,
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView,
+)
 from django.http import HttpResponse
 from . import models
+from django.urls import reverse_lazy
 
 # Create your views here.
 ## FUNCTION BASED VIEW
@@ -56,7 +65,7 @@ class SchoolListView(ListView):
     #! it takes the model (School), lowercases it, and then adds _list
     #! therefore at the end you automatically have the context dictionary:
     #! context = {"school_list":[School1,School2,...]}
-    
+
     ## OPTION 2
     #! if you want to have a different name (e.g. schools) instead of school_list:
     context_object_name = "schools"
@@ -69,3 +78,34 @@ class SchoolDetailView(DetailView):
     context_object_name = "school_detail"
     model = models.School
     template_name = "cbv_app/school_detail.html"
+
+
+# ==============================================================================
+## CreateView
+# ==============================================================================
+
+
+class SchoolCreateView(CreateView):
+    #! fields >> used if you want to avoid that someone edits a field
+    #! (e.g. location) that you do not want to be edited (it's like a security measure)
+    # in fields you specify the fields that you want to show
+    fields = ("name", "principal", "location")
+    model = models.School
+    #! if you run the code without specifying a template, you see that Django is looking for a specific template
+    #! i.e. cbv_app/school_form.html
+    #! it is usually best to choose a name for the template that matches the default that django is looking for
+
+
+class SchoolUpdateView(UpdateView):
+    fields = ("name", "principal")
+    #! leave out 'location' because it is unlikely that a school location changes
+    model = models.School
+
+
+class SchoolDeleteView(DeleteView):
+    model = models.School
+    template_name = "cbv_app/school_confirm_delete.html"
+    #! now you have to add a success url
+    # reverse_lazy is called, because you want it to be run only when it has been actually deleted
+    success_url = reverse_lazy("cbv_app:school_list")
+    # success_url = "/"

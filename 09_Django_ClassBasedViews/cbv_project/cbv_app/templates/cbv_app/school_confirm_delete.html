@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+
+
+
+
+<div class="container customcontainer">
+    <h1>Delete school: {{school.name}}?</h1>
+
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <input class='btn btn-danger' type="submit"  value="Confirm">
+            <!-- you should also insert an option for cancelling the operation (if you do not want to delete) -->
+            <a href="{% url 'cbv_app:school_detail' pk=school.pk %}">Cancel</a>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
