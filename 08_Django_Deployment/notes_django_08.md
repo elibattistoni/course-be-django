@@ -15,6 +15,8 @@ There are still many topics to learn:
 
 We will cover these topics in a mix of clone projects and the "Advanced" Django Topic Sections
 
+The repo for this exercise can be found at github-django-deployment
+
 
 # Django Deployment
 

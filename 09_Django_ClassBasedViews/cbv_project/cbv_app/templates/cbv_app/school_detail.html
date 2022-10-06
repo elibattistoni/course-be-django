@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<h1>This page shows the school details</h1>
+
+<p>Note: you could have template inheritance from base.html or cbv_app_base.html: in this case it
+    inherits from base.html, but if you want more info on how to inherit from cbv_app_base.html see the relative file!
+</p>
+
+<h3>School details:</h3>
+<p>Name: {{school_detail.name}}</p>
+<p>Principal: {{school_detail.principal}}</p>
+<p>Location: {{school_detail.location}}</p>
+
+<h3>Students of this School:</h3>
+<!-- Where does the .students.all come from? In the model Student we have added a related_name variable "students" -->
+{% for student in school_detail.students.all %}
+<p>{{student.name}} who is {{student.age}} years old.</p>
+{% endfor %}
+
+{% endblock %}

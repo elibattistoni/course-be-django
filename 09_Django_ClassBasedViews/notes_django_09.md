@@ -54,3 +54,17 @@ However, it is also common practice to have a template folder inside the app's f
         Email address: eli.battistoni@gmail.com
         Password: elisa
 - create a population script (populate_models.py) and run it with python populate_models.py
+- create a templates folder inside the cbv_app; this is another convention: in the templates folder of the project insert the html files that do not belong to the app; in the templates folder of the app insert the html files that belong to the app
+
+# Important
+For the Student model, we have defined a foreign key (School) but we did not define a primary key (it would not make sense to define a primary key e.g. with the name because the name is shared). Django automatically creates (if not specified otherwise) a primary key that is the id of the record (a serial number marker, i.e. increasing integer).
+So if you call .id on the mìobject model, you will get the primary key id. Same goes for the model School (we did not define, at first, a primary key):
+```
+class School(models.Model):
+    name = models.CharField(max_length = 256)
+    principal = models.CharField(max_length=256)
+    location = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.name
+```

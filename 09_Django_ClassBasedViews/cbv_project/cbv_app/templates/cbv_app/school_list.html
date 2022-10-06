@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<h1>This is a list of all the schools</h1>
+
+<p>Note: you could have template inheritance from base.html or cbv_app_base.html: in this case it
+    inherits from base.html, but if you want more info on how to inherit from cbv_app_base.html see the relative file!
+</p>
+
+<ol>
+    <!-- NOTE you could use the automatic name school_list for the loop: for school in school_list >>> check the view for more information about the term "school_list" -->
+    <!-- and for each school, you want to have a link that sends you to the details of that school -->
+    {% for school in schools %}
+    <h4>
+        <li><a href="{{school.id}}">{{school.name}}</a></li>
+    </h4>
+    {% endfor %}
+</ol>
+{% endblock %}
